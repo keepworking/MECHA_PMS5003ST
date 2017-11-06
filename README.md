@@ -104,12 +104,12 @@ void loop(){
 
 PMS5003ST 미세먼지 센서는 다양한 종류의 센서 데이터를 제공합니다.
 
-* [습도](#getHumi)
-* [온도](#getTemp)
-* [포름알데히드](#getForm)
-* [대기 미세먼지 수치](#getPmAto)
-* [표준 입자 미세먼지 수치](#getPmCf1)
-* [0.1L 당 미세먼지 입자 계수](#getPcs)
+* [습도](#gethumi)
+* [온도](#gettemp)
+* [포름알데히드](#getform)
+* [대기 미세먼지 수치](#getpmato)
+* [표준 입자 미세먼지 수치](#getpmcf1)
+* [0.1L 당 미세먼지 입자 계수](#getpcs)
 
 #### getHumi
 
