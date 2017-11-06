@@ -71,9 +71,9 @@ public:
   double getHumi();
   double getTemp();
   unsigned int getForm();
-  unsigned int getPcs(double);
-  unsigned int getPmAto(double);
-  unsigned int getPmCf1(double);
+  unsigned int getPcs(double);    //available to 10, 5, 2.5, 1, 0.5, 0.3
+  unsigned int getPmAto(double);  //availalbe to 10, 2.5, 1
+  unsigned int getPmCf1(double);  //availalbe to 10, 2.5, 1 
 
 private:
   byte Packet[5] = {0x42,0x4d,0,};

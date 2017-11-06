@@ -69,7 +69,6 @@ int MECHA_PMS5003ST::read(unsigned long timeout){
   }
   if(reinterpret_cast<unsigned int *> (buffer)[19] != 0x424D ||
       reinterpret_cast<unsigned int *> (buffer)[0] != check){
-    Serial.println("ERROR");
     return false;
   }
   memcpy(data,buffer,sizeof(buffer));
@@ -88,8 +87,8 @@ unsigned int MECHA_PMS5003ST::getForm(){
   return data[DATA_FORMALDE];
 }
 
-unsigned int MECHA_PMS5003ST::getPcs(double parm){
-  switch((int)(parm*10)){
+unsigned int MECHA_PMS5003ST::getPcs(double pcs){
+  switch((int)(pcs*10)){
     case 100: return data[DATA_PCS100ug];
     case 50 : return data[DATA_PCS50ug];
     case 25 : return data[DATA_PCS25ug];
@@ -100,8 +99,8 @@ unsigned int MECHA_PMS5003ST::getPcs(double parm){
   return 0;
 }
 
-unsigned int MECHA_PMS5003ST::getPmAto(double parm){
-  switch((int)(parm*10)){
+unsigned int MECHA_PMS5003ST::getPmAto(double pm){
+  switch((int)(pm*10)){
     case 100: return data[DATA_PM100ATO];
     case 25 : return data[DATA_PM25ATO];
     case 10 : return data[DATA_PM10ATO];
@@ -109,8 +108,8 @@ unsigned int MECHA_PMS5003ST::getPmAto(double parm){
   return 0;
 }
 
-unsigned int MECHA_PMS5003ST::getPmCf1(double parm){
-  switch((int)(parm*10)){
+unsigned int MECHA_PMS5003ST::getPmCf1(double pm){
+  switch((int)(pm*10)){
     case 100: return data[DATA_PM100CF1];
     case 25 : return data[DATA_PM25CF1];
     case 10 : return data[DATA_PM10CF1];
