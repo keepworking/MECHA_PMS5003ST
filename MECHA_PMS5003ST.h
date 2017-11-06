@@ -73,7 +73,7 @@ public:
   unsigned int getForm();
   unsigned int getPcs(double);    //available to 10, 5, 2.5, 1, 0.5, 0.3
   unsigned int getPmAto(double);  //availalbe to 10, 2.5, 1
-  unsigned int getPmCf1(double);  //availalbe to 10, 2.5, 1 
+  unsigned int getPmCf1(double);  //availalbe to 10, 2.5, 1
 
 private:
   byte Packet[5] = {0x42,0x4d,0,};
@@ -82,7 +82,7 @@ private:
   SoftwareSerial *sofSeri;
   HardwareSerial *hwSeri;
   Stream *Seri;
-  int LRC = 0;
+  unsigned int LRC = 0;
   void send(byte,byte,byte);
 };
 
