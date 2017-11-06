@@ -83,8 +83,8 @@ double MECHA_PMS5003ST::getTemp(){
   return data[DATA_TEMP]/10.0;
 }
 
-unsigned int MECHA_PMS5003ST::getForm(){
-  return data[DATA_FORMALDE];
+double MECHA_PMS5003ST::getForm(){
+  return data[DATA_FORMALDE]/1000.0;
 }
 
 unsigned int MECHA_PMS5003ST::getPcs(double pcs){

@@ -146,7 +146,7 @@ void loop(){
   pms.read();
   Serial.print("Formaldehyde ");
   Serial.print(pms.getForm());
-  Serial.println("mg/m3");
+  Serial.println("ug/m3");
 }
 ```
 

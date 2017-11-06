@@ -70,7 +70,7 @@ public:
   //Get the parameters
   double getHumi();
   double getTemp();
-  unsigned int getForm();
+  double getForm();
   unsigned int getPcs(double);    //available to 10, 5, 2.5, 1, 0.5, 0.3
   unsigned int getPmAto(double);  //availalbe to 10, 2.5, 1
   unsigned int getPmCf1(double);  //availalbe to 10, 2.5, 1

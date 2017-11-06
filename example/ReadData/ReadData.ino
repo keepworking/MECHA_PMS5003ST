@@ -67,7 +67,7 @@ void loop() {
   Serial.println();
   Serial.print("Formalde\t");
   Serial.print(pms.getForm());
-  Serial.print("mg/m3");
+  Serial.print("ug/m3");
   Serial.println();
   Serial.print("Temperat\t");
   Serial.print(pms.getTemp());
