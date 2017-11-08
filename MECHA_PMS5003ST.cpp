@@ -56,7 +56,7 @@ int MECHA_PMS5003ST::read(unsigned long timeout){
   check = 0;
   start = millis();
   while(Seri->available() < 40){
-     if(millis() - start > timeout){return;}
+     if(millis() - start > timeout){return false;}
   }
   while(Seri->available() > 0){
     byte c = Seri->read();
