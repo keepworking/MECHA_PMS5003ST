@@ -65,7 +65,13 @@ int MECHA_PMS5003ST::read(unsigned long timeout){
       check += (unsigned int)c;
     }
     cnt++;
-    cnt = cnt % 40;
+    if(cnt == 40){
+      break;
+    }
+  }
+  delay(10);// clear Buffer
+  while(Seri->available() > 0){
+    Seri->read();
   }
   if(reinterpret_cast<unsigned int *> (buffer)[19] != 0x424D ||
       reinterpret_cast<unsigned int *> (buffer)[0] != check){
